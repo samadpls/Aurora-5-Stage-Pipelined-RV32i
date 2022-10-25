@@ -1,0 +1,9 @@
+[0m[[0m[31merror[0m] [0m[0mD:\5 stage pipline\src\test\scala\datapath\Mem_WB_test.scala:9:9: inferred type arguments [datapath.Mem_WB] do not conform to method test's type parameter bounds [T <: chisel3.MultiIOModule][0m
+[0m[[0m[31merror[0m] [0m[0m        test(new Mem_WB()){c=>[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5 stage pipline\src\test\scala\datapath\Mem_WB_test.scala:9:14: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : datapath.Mem_WB[0m
+[0m[[0m[31merror[0m] [0m[0m required: T[0m
+[0m[[0m[31merror[0m] [0m[0m        test(new Mem_WB()){c=>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

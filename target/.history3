@@ -1,0 +1,11 @@
+1666635746003:testOnly datapath.Inst_fetch_test
+1666635859778:testOnly datapath.inst_fetch_test
+1666635920444:testOnly datapath.A
+1666635999525:testOnly datapath.inst_fetch_test
+1666636020794:testOnly datapath.Inst_fetch_test
+1666638710333:testOnly datapath.ID_test
+1666639347855:testOnly datapath.EX_test
+1666639763498:testOnly datapath.Mem_WB
+1666639810817:testOnly datapath.Mem_WB_test
+1666639901184:testOnly datapath.MEM_WB_test
+1666722483827:git remote add https://github.com/samadpls/5-Stage-Pipline.git
