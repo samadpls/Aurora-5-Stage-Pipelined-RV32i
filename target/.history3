@@ -9,3 +9,5 @@
 1666639810817:testOnly datapath.Mem_WB_test
 1666639901184:testOnly datapath.MEM_WB_test
 1666722483827:git remote add https://github.com/samadpls/5-Stage-Pipline.git
+1666959521674:testOnly datapath.Top
+1666961773353:testOnly datapath.toptest

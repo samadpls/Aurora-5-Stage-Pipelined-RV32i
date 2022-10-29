@@ -1,4 +1,4 @@
-package controler
+package datapath
 import chisel3._
 import org.scalatest._
 import chiseltest._

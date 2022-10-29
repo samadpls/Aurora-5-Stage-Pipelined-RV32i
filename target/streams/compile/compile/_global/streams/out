@@ -1,4 +1,105 @@
-[0m[[0m[31merror[0m] [0m[0mD:\5 stage pipline\src\main\scala\datapath\fivestage.scala:5:32: '}' expected but eof found.[0m
-[0m[[0m[31merror[0m] [0m[0mclass fivestage extends Module{[0m
-[0m[[0m[31merror[0m] [0m[0m                               ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\EX.scala:44:20: value strData_in is not a member of chisel3.Bundle{val memWrite_in: chisel3.UInt; val memRead_in: chisel3.UInt; val memToReg_in: chisel3.UInt; val rd_in: chisel3.UInt; val aluOutput_in: chisel3.SInt; val regWrite_in: chisel3.UInt; val rs2Sel_in: chisel3.UInt; val baseReg_in: chisel3.SInt; val offSet_in: chisel3.SInt; val memWrite_out: chisel3.UInt; val memRead_out: chisel3.UInt; val memToReg_out: chisel3.UInt; val rd_out: chisel3.UInt; val aluOutput_out: chisel3.SInt; val regWrite_out: chisel3.UInt; val rs2Sel_out: chisel3.UInt; val baseReg_out: chisel3.SInt; val offSet_out: chisel3.SInt}[0m
+[0m[[0m[31merror[0m] [0m[0m	reg_strData := io.strData_in[0m
+[0m[[0m[31merror[0m] [0m[0m	                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\EX.scala:55:5: value strData_out is not a member of chisel3.Bundle{val memWrite_in: chisel3.UInt; val memRead_in: chisel3.UInt; val memToReg_in: chisel3.UInt; val rd_in: chisel3.UInt; val aluOutput_in: chisel3.SInt; val regWrite_in: chisel3.UInt; val rs2Sel_in: chisel3.UInt; val baseReg_in: chisel3.SInt; val offSet_in: chisel3.SInt; val memWrite_out: chisel3.UInt; val memRead_out: chisel3.UInt; val memToReg_out: chisel3.UInt; val rd_out: chisel3.UInt; val aluOutput_out: chisel3.SInt; val regWrite_out: chisel3.UInt; val rs2Sel_out: chisel3.UInt; val baseReg_out: chisel3.SInt; val offSet_out: chisel3.SInt}[0m
+[0m[[0m[31merror[0m] [0m[0m	io.strData_out := reg_strData[0m
+[0m[[0m[31merror[0m] [0m[0m	   ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\ID.scala:67:20: value strData_in is not a member of chisel3.Bundle{val memWrite_in: chisel3.UInt; val memRead_in: chisel3.UInt; val memToReg_in: chisel3.UInt; val operandA_in: chisel3.SInt; val operandB_in: chisel3.SInt; val rd_in: chisel3.UInt; val aluCtrl_in: chisel3.UInt; val regWrite_in: chisel3.UInt; val rs1Ins_in: chisel3.UInt; val rs2Ins_in: chisel3.UInt; val operandAsel_in: chisel3.UInt; val operandBsel_in: chisel3.UInt; val pc_in: chisel3.UInt; val pc4_in: chisel3.UInt; val memWrite_out: chisel3.UInt; val memRead_out: chisel3.UInt; val memToReg_out: chisel3.UInt; val operandA_out: chisel3.SInt; val operandB_out: chisel3.SInt; val rd_out: chisel3.UInt; val aluCtrl_out: chisel3.UInt; val regWrite_out: chisel3.UInt; val rs1Ins_out: chisel3.UInt; val rs2Ins_out: chisel3.UInt; val operandAsel_out: chisel3.UInt; val operandBsel_out: chisel3.UInt; val pc_out: chisel3.UInt; val pc4_out: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m	reg_strData := io.strData_in[0m
+[0m[[0m[31merror[0m] [0m[0m	                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\ID.scala:74:19: value hazard_in is not a member of chisel3.Bundle{val memWrite_in: chisel3.UInt; val memRead_in: chisel3.UInt; val memToReg_in: chisel3.UInt; val operandA_in: chisel3.SInt; val operandB_in: chisel3.SInt; val rd_in: chisel3.UInt; val aluCtrl_in: chisel3.UInt; val regWrite_in: chisel3.UInt; val rs1Ins_in: chisel3.UInt; val rs2Ins_in: chisel3.UInt; val operandAsel_in: chisel3.UInt; val operandBsel_in: chisel3.UInt; val pc_in: chisel3.UInt; val pc4_in: chisel3.UInt; val memWrite_out: chisel3.UInt; val memRead_out: chisel3.UInt; val memToReg_out: chisel3.UInt; val operandA_out: chisel3.SInt; val operandB_out: chisel3.SInt; val rd_out: chisel3.UInt; val aluCtrl_out: chisel3.UInt; val regWrite_out: chisel3.UInt; val rs1Ins_out: chisel3.UInt; val rs2Ins_out: chisel3.UInt; val operandAsel_out: chisel3.UInt; val operandBsel_out: chisel3.UInt; val pc_out: chisel3.UInt; val pc4_out: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m	reg_hazard := io.hazard_in[0m
+[0m[[0m[31merror[0m] [0m[0m	                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\ID.scala:85:5: value strData_out is not a member of chisel3.Bundle{val memWrite_in: chisel3.UInt; val memRead_in: chisel3.UInt; val memToReg_in: chisel3.UInt; val operandA_in: chisel3.SInt; val operandB_in: chisel3.SInt; val rd_in: chisel3.UInt; val aluCtrl_in: chisel3.UInt; val regWrite_in: chisel3.UInt; val rs1Ins_in: chisel3.UInt; val rs2Ins_in: chisel3.UInt; val operandAsel_in: chisel3.UInt; val operandBsel_in: chisel3.UInt; val pc_in: chisel3.UInt; val pc4_in: chisel3.UInt; val memWrite_out: chisel3.UInt; val memRead_out: chisel3.UInt; val memToReg_out: chisel3.UInt; val operandA_out: chisel3.SInt; val operandB_out: chisel3.SInt; val rd_out: chisel3.UInt; val aluCtrl_out: chisel3.UInt; val regWrite_out: chisel3.UInt; val rs1Ins_out: chisel3.UInt; val rs2Ins_out: chisel3.UInt; val operandAsel_out: chisel3.UInt; val operandBsel_out: chisel3.UInt; val pc_out: chisel3.UInt; val pc4_out: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m	io.strData_out := reg_strData[0m
+[0m[[0m[31merror[0m] [0m[0m	   ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\ID.scala:92:5: value hazard_out is not a member of chisel3.Bundle{val memWrite_in: chisel3.UInt; val memRead_in: chisel3.UInt; val memToReg_in: chisel3.UInt; val operandA_in: chisel3.SInt; val operandB_in: chisel3.SInt; val rd_in: chisel3.UInt; val aluCtrl_in: chisel3.UInt; val regWrite_in: chisel3.UInt; val rs1Ins_in: chisel3.UInt; val rs2Ins_in: chisel3.UInt; val operandAsel_in: chisel3.UInt; val operandBsel_in: chisel3.UInt; val pc_in: chisel3.UInt; val pc4_in: chisel3.UInt; val memWrite_out: chisel3.UInt; val memRead_out: chisel3.UInt; val memToReg_out: chisel3.UInt; val operandA_out: chisel3.SInt; val operandB_out: chisel3.SInt; val rd_out: chisel3.UInt; val aluCtrl_out: chisel3.UInt; val regWrite_out: chisel3.UInt; val rs1Ins_out: chisel3.UInt; val rs2Ins_out: chisel3.UInt; val operandAsel_out: chisel3.UInt; val operandBsel_out: chisel3.UInt; val pc_out: chisel3.UInt; val pc4_out: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m	io.hazard_out := reg_hazard[0m
+[0m[[0m[31merror[0m] [0m[0m	   ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:75:14: value rd is not a member of datapath.reg[0m
+[0m[[0m[31merror[0m] [0m[0m    reg_file.rd.rd:=Mem_wb.io.rd_out[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:76:28: value rs1 is not a member of chisel3.Bundle{val memWrite_in: chisel3.UInt; val memRead_in: chisel3.UInt; val memToReg_in: chisel3.UInt; val operandA_in: chisel3.SInt; val operandB_in: chisel3.SInt; val rd_in: chisel3.UInt; val aluCtrl_in: chisel3.UInt; val regWrite_in: chisel3.UInt; val rs1Ins_in: chisel3.UInt; val rs2Ins_in: chisel3.UInt; val operandAsel_in: chisel3.UInt; val operandBsel_in: chisel3.UInt; val pc_in: chisel3.UInt; val pc4_in: chisel3.UInt; val memWrite_out: chisel3.UInt; val memRead_out: chisel3.UInt; val memToReg_out: chisel3.UInt; val operandA_out: chisel3.SInt; val operandB_out: chisel3.SInt; val rd_out: chisel3.UInt; val aluCtrl_out: chisel3.UInt; val regWrite_out: chisel3.UInt; val rs1Ins_out: chisel3.UInt; val rs2Ins_out: chisel3.UInt; val operandAsel_out: chisel3.UInt; val operandBsel_out: chisel3.UInt; val pc_out: chisel3.UInt; val pc4_out: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m    reg_file.io.rs1:=ID.io.rs1.Ins_out[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:86:47: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.SInt[0m
+[0m[[0m[31merror[0m] [0m[0m                (ID.io.operandA_out=== "b00". U ||ID.io.operandA_out=== "b11". U) -> reg_file.io.rd1 , //reg aleardy exist in rd1 so need to add[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:86:80: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.SInt[0m
+[0m[[0m[31merror[0m] [0m[0m                (ID.io.operandA_out=== "b00". U ||ID.io.operandA_out=== "b11". U) -> reg_file.io.rd1 , //reg aleardy exist in rd1 so need to add[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:87:47: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.SInt[0m
+[0m[[0m[31merror[0m] [0m[0m                (ID.io.operandA_out=== "b01". U) -> ID.io.pc4_out.asSInt,[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:88:47: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.SInt[0m
+[0m[[0m[31merror[0m] [0m[0m                (ID.io.operandA_out=== "b10". U) -> ID.io.pc_out.asSInt )[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:144:7: not found: value alu_controler[0m
+[0m[[0m[31merror[0m] [0m[0m	when(alu_controler.io.op_a === "b01".U){[0m
+[0m[[0m[31merror[0m] [0m[0m	     ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:146:13: not found: value alu_controler[0m
+[0m[[0m[31merror[0m] [0m[0m	}.elsewhen(alu_controler.io.op_a === "b10".U){[0m
+[0m[[0m[31merror[0m] [0m[0m	           ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:149:24: not found: value regFile[0m
+[0m[[0m[31merror[0m] [0m[0m		ID.io.operandA_in := regFile.io.rd1[0m
+[0m[[0m[31merror[0m] [0m[0m		                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:153:7: not found: value alu_controler[0m
+[0m[[0m[31merror[0m] [0m[0m	when(alu_controler.io.extend_sel === "b00".U & alu_controler.io.op_b === 1.U){[0m
+[0m[[0m[31merror[0m] [0m[0m	     ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:153:49: not found: value alu_controler[0m
+[0m[[0m[31merror[0m] [0m[0m	when(alu_controler.io.extend_sel === "b00".U & alu_controler.io.op_b === 1.U){[0m
+[0m[[0m[31merror[0m] [0m[0m	                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:155:13: not found: value alu_controler[0m
+[0m[[0m[31merror[0m] [0m[0m	}.elsewhen(alu_controler.io.extend_sel === "b01".U & alu_controler.io.op_b === 1.U){[0m
+[0m[[0m[31merror[0m] [0m[0m	           ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:155:55: not found: value alu_controler[0m
+[0m[[0m[31merror[0m] [0m[0m	}.elsewhen(alu_controler.io.extend_sel === "b01".U & alu_controler.io.op_b === 1.U){[0m
+[0m[[0m[31merror[0m] [0m[0m	                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:157:13: not found: value alu_controler[0m
+[0m[[0m[31merror[0m] [0m[0m	}.elsewhen(alu_controler.io.extend_sel === "b10".U & alu_controler.io.op_b === 1.U){[0m
+[0m[[0m[31merror[0m] [0m[0m	           ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:157:55: not found: value alu_controler[0m
+[0m[[0m[31merror[0m] [0m[0m	}.elsewhen(alu_controler.io.extend_sel === "b10".U & alu_controler.io.op_b === 1.U){[0m
+[0m[[0m[31merror[0m] [0m[0m	                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:160:24: not found: value regFile[0m
+[0m[[0m[31merror[0m] [0m[0m		ID.io.operandB_in := regFile.io.rd2[0m
+[0m[[0m[31merror[0m] [0m[0m		                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top2.scala:15:24: not found: type pccounter[0m
+[0m[[0m[31merror[0m] [0m[0m    val pc=Module( new pccounter )[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top2.scala:16:29: not found: type datamem[0m
+[0m[[0m[31merror[0m] [0m[0m    val data_mem=Module(new datamem)[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top2.scala:17:30: not found: type InstMem[0m
+[0m[[0m[31merror[0m] [0m[0m    val inst_mem =Module(new InstMem)[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top2.scala:18:29: not found: type reg[0m
+[0m[[0m[31merror[0m] [0m[0m    val reg_file=Module(new reg)[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top2.scala:19:33: not found: type controler[0m
+[0m[[0m[31merror[0m] [0m[0m    val controler = Module( new controler)[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top2.scala:20:26: not found: type ALU4[0m
+[0m[[0m[31merror[0m] [0m[0m    val alu =Module( new ALU4)[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top2.scala:21:30: not found: type BranchControl[0m
+[0m[[0m[31merror[0m] [0m[0m    val branch = Module( new BranchControl)[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top2.scala:22:26: not found: type ImmdValGen1[0m
+[0m[[0m[31merror[0m] [0m[0m    val imm =Module( new ImmdValGen1)[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top2.scala:23:28: not found: type jalr[0m
+[0m[[0m[31merror[0m] [0m[0m    val Jalr = Module( new jalr)[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top2.scala:24:30: not found: type alu_controler[0m
+[0m[[0m[31merror[0m] [0m[0m    val alu_cnt =Module( new alu_controler)[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m32 errors found[0m
