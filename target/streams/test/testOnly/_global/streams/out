@@ -1,97 +1,10 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(datapath.toptest, org.scalatest.tools.Framework$$anon$1@42a6d154, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(datapath.toptest, org.scalatest.tools.Framework$$anon$1@110cea42, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mtoptest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m- top  Test *** FAILED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  firrtl.passes.PassExceptions: firrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 30:22] : [module Top]  Reference Mem_wb is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : Mem_wb.io.rs2Sel_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 30:22] : [module Top]  Reference Mem_wb is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : Mem_wb.io.memToReg_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 30:22] : [module Top]  Reference Mem_wb is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : Mem_wb.io.dataOut_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 29:19] : [module Top]  Reference EX is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : EX.io.rs2Sel_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 24:24] : [module Top]  Reference alu_cnt is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : alu_cnt.io.alu_op <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 21:24] : [module Top]  Reference branch is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : branch.io.arg_y <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 16:24] : [module Top]  Reference data_mem is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : data_mem.io.Addr <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 28:19] : [module Top]  Reference ID is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : ID.io.strData_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 20:20] : [module Top]  Reference alu is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : alu.io.in2 <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 23:22] : [module Top]  Reference Jalr is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : Jalr.io.addr <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 28:19] : [module Top]  Reference ID is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : ID.io.operandBsel_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 29:19] : [module Top]  Reference EX is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : EX.io.aluOutput_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  : [module Top]  Reference io is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : io.addr <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 18:24] : [module Top]  Reference reg_file is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : reg_file.io.write <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 28:19] : [module Top]  Reference ID is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : ID.io.hazard_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 29:19] : [module Top]  Reference EX is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : EX.io.baseReg_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 29:19] : [module Top]  Reference EX is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : EX.io.memRead_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 21:24] : [module Top]  Reference branch is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : branch.io.alu_opp <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 23:22] : [module Top]  Reference Jalr is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : Jalr.io.pc_addr <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 30:22] : [module Top]  Reference Mem_wb is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : Mem_wb.io.aluOutput_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 30:22] : [module Top]  Reference Mem_wb is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : Mem_wb.io.MemRead_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 29:19] : [module Top]  Reference EX is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : EX.io.memWrite_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 29:19] : [module Top]  Reference EX is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : EX.io.rd_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 16:24] : [module Top]  Reference data_mem is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : data_mem.io.MemRead <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 16:24] : [module Top]  Reference data_mem is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : data_mem.io.Data <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 18:24] : [module Top]  Reference reg_file is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : reg_file.io.rd <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 21:24] : [module Top]  Reference branch is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : branch.io.arg_x <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 30:22] : [module Top]  Reference Mem_wb is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : Mem_wb.io.baseReg_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 29:19] : [module Top]  Reference EX is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : EX.io.regWrite_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 28:19] : [module Top]  Reference ID is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : ID.io.operandAsel_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 30:22] : [module Top]  Reference Mem_wb is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : Mem_wb.io.memWrite_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 20:20] : [module Top]  Reference alu is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : alu.io.in1 <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 30:22] : [module Top]  Reference Mem_wb is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : Mem_wb.io.regWrite_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 16:24] : [module Top]  Reference data_mem is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : data_mem.io.MemWrite <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 29:19] : [module Top]  Reference EX is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : EX.io.strData_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 28:19] : [module Top]  Reference ID is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : ID.io.memToReg_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 29:19] : [module Top]  Reference EX is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : EX.io.offSet_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 30:22] : [module Top]  Reference Mem_wb is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : Mem_wb.io.offSet_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 30:22] : [module Top]  Reference Mem_wb is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : Mem_wb.io.rd_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 29:19] : [module Top]  Reference EX is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : EX.io.memToReg_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 20:20] : [module Top]  Reference alu is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : alu.io.alu_Op <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[top.scala 28:19] : [module Top]  Reference ID is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : ID.io.aluCtrl_in <= VOID[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.PassException: 42 errors detected![0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 3 seconds, 464 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- top  Test[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 3 seconds, 971 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
-[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
-[0m[[0m[31merror[0m] [0m[0m	datapath.toptest[0m
-[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	datapath.toptest[0m

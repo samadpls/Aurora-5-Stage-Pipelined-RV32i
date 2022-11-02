@@ -41,7 +41,7 @@ class EX extends Module{
 	reg_memRead := io.memRead_in
 	reg_memToReg := io.memToReg_in
 	reg_rd := io.rd_in
-	reg_strData := io.strData_in
+	//reg_strData := io.strData_in
 	reg_aluOutput := io.aluOutput_in
 	reg_regWrite := io.regWrite_in
 	reg_rs2Sel := io.rs2Sel_in	
@@ -52,7 +52,7 @@ class EX extends Module{
 	io.memRead_out := reg_memRead
 	io.memToReg_out := reg_memToReg
 	io.rd_out := reg_rd
-	io.strData_out := reg_strData
+	//io.strData_out := reg_strData
 	io.aluOutput_out := reg_aluOutput
 	io.regWrite_out := reg_regWrite
 	io.rs2Sel_out := reg_rs2Sel

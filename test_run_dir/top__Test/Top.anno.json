@@ -1,0 +1,29 @@
+[
+  {
+    "class":"firrtl.stage.FirrtlFileAnnotation",
+    "file":"test_run_dir\\top__Test\\Top.lo.fir"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.LowFirrtlEmitter"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|reg>io_rd2"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|reg>io_rd1"
+  },
+  {
+    "class":"firrtl.annotations.LoadMemoryAnnotation",
+    "target":"Top.InstMem.imem",
+    "fileName":"D:/5_stage_pipline/src/main/scala/datapath/text.txt",
+    "hexOrBinary":"h",
+    "originalMemoryNameOpt":"imem"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir\\top__Test"
+  }
+]

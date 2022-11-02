@@ -1,25 +1,11 @@
 [0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = D:\5_stage_pipline\target\scala-2.12\classes.bak[0m
 [0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	top_io.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Top.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EX$$anon$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EX.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ID$$anon$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ID.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	top_io.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	top_io.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Top.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EX$$anon$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EX.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ID$$anon$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ID.class[0m
-[0m[[0m[0mdebug[0m] [0m[0mRolling back changes to class files.[0m
-[0m[[0m[0mdebug[0m] [0m[0mRemoving generated classes:[0m
-[0m[[0m[0mdebug[0m] [0m[0mRestoring class files: [0m
 [0m[[0m[0mdebug[0m] [0m[0m	top_io.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EX$$anon$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ID.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EX.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Top.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ID$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	top_io.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: D:\5_stage_pipline\target\scala-2.12\classes.bak[0m

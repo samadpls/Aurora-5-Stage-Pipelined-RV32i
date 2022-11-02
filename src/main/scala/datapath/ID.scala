@@ -46,14 +46,14 @@ class ID extends Module{
 	val reg_operandA = RegInit(0.S(32.W))
 	val reg_operandB = RegInit(0.S(32.W))
 	val reg_rd = RegInit(0.U(5.W))
-	val reg_strData = RegInit(0.S(32.W))
+	//val reg_strData = RegInit(0.S(32.W))
 	val reg_aluCtrl = RegInit(0.U(5.W))
 	val reg_regWrite = RegInit(0.U(1.W))
 	val reg_rs1Ins = RegInit(0.U(5.W))
 	val reg_rs2Ins = RegInit(0.U(5.W))
 	val reg_operandAsel = RegInit(0.U(2.W))
 	val reg_operandBsel = RegInit(0.U(1.W))
-	val reg_hazard = RegInit(0.U(1.W))
+	//val reg_hazard = RegInit(0.U(1.W))
 	val reg_pc = RegInit(0.U(32.W))
 	val reg_pc4 = RegInit(0.U(32.W))
 
@@ -64,14 +64,14 @@ class ID extends Module{
 	reg_operandA := io.operandA_in
 	reg_operandB := io.operandB_in
 	reg_rd := io.rd_in
-	reg_strData := io.strData_in
+	//reg_strData := io.strData_in
 	reg_aluCtrl := io.aluCtrl_in
 	reg_regWrite := io.regWrite_in
 	reg_rs1Ins := io.rs1Ins_in
 	reg_rs2Ins := io.rs2Ins_in
 	reg_operandAsel := io.operandAsel_in
 	reg_operandBsel := io.operandBsel_in
-	reg_hazard := io.hazard_in
+	//reg_hazard := io.hazard_in
 	reg_pc := io.pc_in
 	reg_pc4 := io.pc4_in
 
@@ -82,14 +82,14 @@ class ID extends Module{
 	io.operandA_out := reg_operandA
 	io.operandB_out := reg_operandB
 	io.rd_out := reg_rd
-	io.strData_out := reg_strData
+	//io.strData_out := reg_strData
 	io.aluCtrl_out := reg_aluCtrl
 	io.regWrite_out := reg_regWrite
 	io.rs1Ins_out := reg_rs1Ins
 	io.rs2Ins_out := reg_rs2Ins
 	io.operandAsel_out := reg_operandAsel
 	io.operandBsel_out := reg_operandBsel
-	io.hazard_out := reg_hazard
+	//io.hazard_out := reg_hazard
 	io.pc_out := reg_pc
 	io.pc4_out := reg_pc4
 

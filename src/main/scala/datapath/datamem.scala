@@ -6,8 +6,8 @@ class datamem extends Module {
   val io = IO (new Bundle {
 	val Addr = Input(UInt(8.W))
 	val Data = Input(SInt(32.W))
-	val MemWrite = Input(Bool())
-	val MemRead = Input(Bool())
+	val MemWrite = Input(UInt(1.W))
+	val MemRead = Input(UInt(1.W))
 	val out = Output(SInt(32.W))
   })
 	val mem = Mem(1024,SInt(32.W))
