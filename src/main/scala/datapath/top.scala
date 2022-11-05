@@ -57,6 +57,18 @@ class Top extends Module{
 
     //ID
     
+
+    ID.io.memWrite_in:=controler.io.memwrite
+    ID.io.memRead_in:=controler.io.memread
+    ID.io.memToReg_in:=controler.io.memtoreg
+    ID.io.regWrite_in:=controler.io.regwrite.asUInt
+
+    ID.io.operandAsel_in:=reg_file.io.rd1.asUInt
+    ID.io.operandBsel_in:=reg_file.io.rd2.asUInt
+	ID.io.aluOp_in := controler.io.aluop
+	ID.io.br_en_in := controler.io.branch
+	ID.io.NextPc := controler.io.next_pc
+
     ID.io.pc_in:=IF.io.pc_out
     ID.io.pc4_in:=IF.io.pc4_out
     ID.io.rs1Ins_in:=IF.io.ins_out(19,15)
@@ -70,42 +82,6 @@ class Top extends Module{
     func3:=IF.io.ins_out(14,12)
     val func7= RegInit(0.U(1.W))
     func7:=IF.io.ins_out(30)
-    
-
-
-    ID.io.memWrite_in:=controler.io.memwrite
-    ID.io.memRead_in:=controler.io.memread
-    ID.io.memToReg_in:=controler.io.memtoreg
-    ID.io.regWrite_in:=controler.io.regwrite.asUInt
-    ID.io.operandAsel_in:=controler.io.op_a
-    ID.io.operandBsel_in:=controler.io.op_b.asUInt
-
-    ID.io.operandAsel_in:=reg_file.io.rd1.asUInt
-    ID.io.operandBsel_in:=reg_file.io.rd2.asUInt
-	ID.io.aluOp_in := controler.io.aluop
-	ID.io.br_en_in := controler.io.branch
-	ID.io.NextPc := controler.io.next_pc
-
-    //Operand B alu.io.alu_Op:=ID.io.aluCtrl_out
-	when(controler.io.extend_sel === "b00".U & controler.io.op_b === 1.U){
-		ID.io.imm  := imm.io.i_imm
-	}.elsewhen(controler.io.extend_sel === "b01".U & controler.io.op_b === 1.U){
-		ID.io.imm  := imm.io.u_imm
-	}.elsewhen(controler.io.extend_sel === "b10".U & controler.io.op_b === 1.U){
-		ID.io.imm  := imm.io.s_imm
-	}.otherwise{
-		ID.io.imm  := reg_file.io.rd2
-	}
-
-    alu_cnt.io.alu_op:=ID.io.aluOp_out
-    alu_cnt.io.func3:=func3
-    alu_cnt.io.func7:=func7
-    
-
-     
-    //immediate  aluCtrl_in
-    imm.io.instr:=IF.io.ins_out
-    imm.io.pc_val:=IF.io.pc_out
 
     when(Forward_U.io.forward_a === "b00".U) {
     alu.io.in1  := ID.io.operandA_out
@@ -116,18 +92,40 @@ class Top extends Module{
     } .otherwise {
     alu.io.in1  := ID.io.operandA_out
     }
+    //Operand B alu.io.alu_Op:=ID.io.aluCtrl_out
+	when(controler.io.extend_sel === "b00".U & controler.io.op_b === 1.U){
+		ID.io.imm  := imm.io.i_imm
+	}.elsewhen(controler.io.extend_sel === "b01".U & controler.io.op_b === 1.U){
+		ID.io.imm  := imm.io.u_imm
+	}.elsewhen(controler.io.extend_sel === "b10".U & controler.io.op_b === 1.U){
+		ID.io.imm  := imm.io.s_imm
+	}.otherwise{
+		ID.io.imm  := reg_file.io.rd2
+	}
+    alu.io.in2:=0.S
+    alu_cnt.io.alu_op:=ID.io.aluOp_out
+    alu_cnt.io.func3:=func3
+    alu_cnt.io.func7:=func7
+    
+
+     
+    //immediate  aluCtrl_in
+    imm.io.instr:=IF.io.ins_out
+    imm.io.pc_val:=IF.io.pc_out
+
+    
 
     
 
     // Operand A
-	when(controler.io.op_a === "b01".U  ){
-		ID.io.operandA_in := (IF.io.pc_out).asSInt
-	}.elsewhen(controler.io.op_a === "b10".U){
-		ID.io.operandA_in := (IF.io.pc4_out).asSInt 
-	}.otherwise{
-		ID.io.operandA_in := reg_file.io.rd1
-	}	
-    // branch.io.arg_x:=ID.io.operandA_out
+	// when(controler.io.op_a === "b01".U  ){
+	// 	ID.io.operandA_in := (IF.io.pc_out).asSInt
+	// }.elsewhen(controler.io.op_a === "b10".U){
+	// 	ID.io.operandA_in := (IF.io.pc4_out).asSInt 
+	// }.otherwise{
+	// 	ID.io.operandA_in := reg_file.io.rd1
+	// }	
+    //branch.io.arg_x:=ID.io.operandA_out
 	
     //EX
    
