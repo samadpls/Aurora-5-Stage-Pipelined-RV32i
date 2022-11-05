@@ -62,6 +62,8 @@ class Top extends Module{
     ID.io.memRead_in:=controler.io.memread
     ID.io.memToReg_in:=controler.io.memtoreg
     ID.io.regWrite_in:=controler.io.regwrite.asUInt
+    ID.io.operandA_in:=controler.io.op_a.asSInt
+    ID.io.operandB_in:=controler.io.op_b.asSInt
 
     ID.io.operandAsel_in:=reg_file.io.rd1.asUInt
     ID.io.operandBsel_in:=reg_file.io.rd2.asUInt
