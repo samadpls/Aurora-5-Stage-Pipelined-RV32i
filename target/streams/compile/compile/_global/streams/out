@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:117:5: not found: value /[0m
-[0m[[0m[31merror[0m] [0m[0m    /[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:113:26: value aluOutput_ou is not a member of chisel3.Bundle{val memWrite_in: chisel3.UInt; val memRead_in: chisel3.UInt; val memToReg_in: chisel3.UInt; val rd_in: chisel3.UInt; val aluOutput_in: chisel3.SInt; val regWrite_in: chisel3.UInt; val rs2Sel_in: chisel3.UInt; val baseReg_in: chisel3.SInt; val offSet_in: chisel3.SInt; val memWrite_out: chisel3.UInt; val memRead_out: chisel3.UInt; val memToReg_out: chisel3.UInt; val rd_out: chisel3.UInt; val aluOutput_out: chisel3.SInt; val regWrite_out: chisel3.UInt; val rs2Sel_out: chisel3.UInt; val baseReg_out: chisel3.SInt; val offSet_out: chisel3.SInt}[0m
+[0m[[0m[31merror[0m] [0m[0m    alu.io.in1  := EX.io.aluOutput_ou[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
