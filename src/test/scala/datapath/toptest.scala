@@ -6,7 +6,7 @@ import chiseltest._
 class toptest  extends FreeSpec with ChiselScalatestTester {
     "top  Test" in {
         test(new Top()){c=>
-        c.clock.step(25)
+        c.clock.step(100)
         }
     }
 }

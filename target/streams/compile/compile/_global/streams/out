@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:70:37: value RegWrite_out is not a member of chisel3.Bundle{val memToReg_in: chisel3.UInt; val rd_in: chisel3.UInt; val dataOut_in: chisel3.SInt; val aluOutput_in: chisel3.SInt; val regWrite_in: chisel3.UInt; val rs2Sel_in: chisel3.UInt; val baseReg_in: chisel3.SInt; val offSet_in: chisel3.SInt; val MemRead_in: chisel3.UInt; val memWrite_in: chisel3.UInt; val memToReg_out: chisel3.UInt; val rd_out: chisel3.UInt; val dataOut_out: chisel3.SInt; val aluOutput_out: chisel3.SInt; val regWrite_out: chisel3.UInt; val rs2Sel_out: chisel3.UInt; val baseReg_out: chisel3.SInt; val offSet_out: chisel3.SInt; val MemRead_out: chisel3.UInt; val memWrite_out: chisel3.UInt}[0m
-[0m[[0m[31merror[0m] [0m[0m    SD.io.MEM_WB_regWr := Mem_wb.io.RegWrite_out[0m
-[0m[[0m[31merror[0m] [0m[0m                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\src\main\scala\datapath\top.scala:175:13: not found: value control[0m
+[0m[[0m[31merror[0m] [0m[0m	}.elsewhen(control.io.Branch === 1.U && ((EX.io.rd_out ===IF.io.ins_out(24,20)))){[0m
+[0m[[0m[31merror[0m] [0m[0m	           ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

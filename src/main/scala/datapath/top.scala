@@ -54,7 +54,7 @@ class Top extends Module{
     
 
 
-    //immediate  aluCtrl_in
+    //immediate  aluOp_in
     imm.io.instr:=IF.io.ins_out
     imm.io.pc_val:=IF.io.pc_out
 
@@ -82,6 +82,20 @@ class Top extends Module{
     SD.io.MEM_WB_regWr := Mem_wb.io.regWrite_out
     
     
+    // FOR RS1
+    when(SD.io.fwd_rs1 === 1.U) {
+    ID.io.operandA_in := reg_file.io.WriteData
+    } .otherwise {
+    ID.io.operandA_in := reg_file.io.rd1
+    }
+    // FOR RS2
+    when(SD.io.fwd_rs2 === 1.U) {
+    ID.io.operandB_in := reg_file.io.WriteData
+    } .otherwise {
+    ID.io.operandB_in := reg_file.io.rd2
+    }
+
+
 
     
     // Controlling Operand A for ALU
@@ -136,6 +150,48 @@ class Top extends Module{
     ID.io.NextPc :=  controler.io.next_pc
 
 }
+    
+	when(controler.io.branch === 1.B && ((EX.io.rd_out ===IF.io.ins_out(19,15)))){
+
+		ID.io.memWrite_in := 0.U
+		ID.io.memRead_in :=0.U
+		ID.io.memToReg_in := 0.U
+		ID.io.operandAsel_in := 0.U
+		ID.io.operandBsel_in := 0.U
+		ID.io.aluOp_in := 0.U
+		ID.io.regWrite_in := 0.U
+		//ID.io.strData_in := 0.S
+		ID.io.rd_in := 0.U
+		//ID.io.rs1Ins_in := 0.U
+		//ID.io.rs2Ins_in := 0.U
+		//ID.io.hazard_in := 0.U
+		ID.io.pc_in :=0.U
+		ID.io.pc4_in := 0.U
+
+
+		IF.io.ins_in := IF.io.ins_out
+		pc.io.addr :=IF.io.pc4_out
+
+	}.elsewhen(controler.io.branch === 1.U && ((EX.io.rd_out ===IF.io.ins_out(24,20)))){
+		ID.io.memWrite_in := 0.U
+		ID.io.memRead_in :=0.U
+		ID.io.memToReg_in := 0.U
+		ID.io.operandAsel_in := 0.U
+		ID.io.operandBsel_in := 0.U
+		ID.io.aluOp_in := 0.U
+		ID.io.regWrite_in := 0.U
+		//ID.io.strData_in := 0.S
+		ID.io.rd_in := 0.U
+		//ID.io.rs1Ins_in := 0.U
+		//ID.io.rs2Ins_in := 0.U
+		//ID.io.hazard_in := 0.U
+		ID.io.pc_in :=0.U
+		ID.io.pc4_in := 0.U
+
+
+		IF.io.ins_in := IF.io.ins_out
+		pc.io.addr :=IF.io.pc4_out
+	}
 
     
      //BF
@@ -154,6 +210,36 @@ class Top extends Module{
     BL.io.in_rs1 := reg_file.io.rs1.asSInt
     BL.io.in_rs2 := reg_file.io.rs2.asSInt
     BL.io.in_func3 := IF.io.ins_out(14,12)
+
+    when(HD.io.pc_forward === "b1".U) {
+    pc.io.addr := HD.io.pc_out.asUInt
+    }.otherwise {
+    when(controler.io.next_pc === "b01".U) {
+      when(BL.io.output === 1.U && controler.io.branch === 1.B) {
+        pc.io.addr := imm.io.sb_imm.asUInt
+        IF.io.pc_in := 0.U
+        IF.io.pc4_in := 0.U
+        IF.io.ins_in := 0.U
+      }.otherwise {
+        pc.io.addr := pc.io.pc_4
+      }
+
+    }.elsewhen(controler.io.next_pc === "b10".U) {
+      pc.io.addr := imm.io.uj_imm.asUInt
+      IF.io.pc_in := 0.U
+      IF.io.pc4_in := 0.U
+      IF.io.ins_in := 0.U
+    } .elsewhen(controler.io.next_pc === "b11".U) {
+      pc.io.addr := Jalr.io.out.asUInt
+      IF.io.pc_in := 0.U
+      IF.io.pc4_in := 0.U
+      IF.io.ins_in := 0.U
+
+    }.otherwise {
+      pc.io.addr := pc.io.pc_4
+    }
+    }
+
 
 
 when(BF.io.forward_rs1 === "b0000".U) {
@@ -199,8 +285,8 @@ when(BF.io.forward_rs1 === "b0000".U) {
 } .elsewhen(BF.io.forward_rs1 === "b1010".U) {
     // hazard in MEM/WB stage and load type instruction so forwarding from register file write data which will have the correct output from the mux
     Jalr.io.addr := reg_file.io.WriteData
-    BL.io.in_rs1 := reg_file.io.rd1}
-  .otherwise {
+    BL.io.in_rs1 := reg_file.io.rd1
+    }.otherwise {
     BL.io.in_rs1 := reg_file.io.rd1
     Jalr.io.addr := reg_file.io.rd1
 }
@@ -235,7 +321,7 @@ when(BF.io.forward_rs2 === "b000".U) {
    
 
      // //jal r
-    Jalr.io.addr:=reg_file.io.rd1 //input a
+    Jalr.io.addr:=reg_file.io.rs1.asSInt //input a
     Jalr.io.pc_addr:= imm.io.i_imm //input b
 
      
@@ -262,49 +348,7 @@ when(BF.io.forward_rs2 === "b000".U) {
     ID.io.operandA_in := reg_file.io.rd1
 	ID.io.operandB_in:= reg_file.io.rd2
 
-    // FOR RS1
-    when(SD.io.fwd_rs1 === 1.U) {
-    ID.io.rs1Ins_in := reg_file.io.WriteData.asUInt
-    } .otherwise {
-    ID.io.rs1Ins_in := reg_file.io.rd1.asUInt
-    }
-    // FOR RS2
-    when(SD.io.fwd_rs2 === 1.U) {
-    ID.io.rs2Ins_in := reg_file.io.WriteData.asUInt
-    } .otherwise {
-    ID.io.rs2Ins_in := reg_file.io.rd2.asUInt
-    }
-
-
-    when(HD.io.pc_forward === "b1".U) {
-    pc.io.addr := HD.io.pc_out.asUInt
-    }.otherwise {
-    when(controler.io.next_pc === "b01".U) {
-      when(BL.io.output === 1.U && controler.io.branch === 1.B) {
-        pc.io.addr := imm.io.sb_imm.asUInt
-        IF.io.pc_in := 0.U
-        IF.io.pc4_in := 0.U
-        IF.io.ins_in := 0.U
-      }.otherwise {
-        pc.io.addr := pc.io.pc_4
-      }
-
-    }.elsewhen(controler.io.next_pc === "b10".U) {
-      pc.io.addr := imm.io.uj_imm.asUInt
-      IF.io.pc_in := 0.U
-      IF.io.pc4_in := 0.U
-      IF.io.ins_in := 0.U
-    } .elsewhen(controler.io.next_pc === "b11".U) {
-      pc.io.addr := Jalr.io.out.asUInt
-      IF.io.pc_in := 0.U
-      IF.io.pc4_in := 0.U
-      IF.io.ins_in := 0.U
-
-    }.otherwise {
-      pc.io.addr := pc.io.pc_4
-    }
-    }
-
+    
     
 
     when(HD.io.inst_forward === "b1".U) {
@@ -319,32 +363,30 @@ when(BF.io.forward_rs2 === "b000".U) {
         IF.io.ins_in := inst_mem.io.inst
     }
     
-  
-
     
-     alu.io.in2:=0.S
+    alu.io.in2:=0.S
     when(ID.io.operandBsel_out===1.U){
         alu.io.in2:=ID.io.imm_out	
     when(Forward_U.io.forward_b==="b00".U){
-        EX.io.rs2Sel_in:=ID.io.rs2Ins_out
+        EX.io.offSet_in:=ID.io.operandB_out
     }.elsewhen(Forward_U.io.forward_b==="b01".U){
-        EX.io.rs2Sel_in:=EX.io.aluOutput_out.asUInt
+        EX.io.offSet_in:=EX.io.aluOutput_out
     }.elsewhen(Forward_U.io.forward_b==="b10".U){
-        EX.io.rs2Sel_in:=reg_file.io.WriteData.asUInt
+        EX.io.offSet_in:=reg_file.io.WriteData
     }
     }.otherwise{
     when(Forward_U.io.forward_b === "b00".U) {
     alu.io.in2 := ID.io.operandB_out
-    EX.io.rs2Sel_in := ID.io.operandB_out.asUInt
+    EX.io.offSet_in := ID.io.operandB_out
   } .elsewhen(Forward_U.io.forward_b === "b01".U) {
     alu.io.in2 :=EX.io.aluOutput_out
-   EX.io.rs2Sel_in :=EX.io.aluOutput_out.asUInt
+   EX.io.offSet_in :=EX.io.aluOutput_out
   }.elsewhen(Forward_U.io.forward_b === "b10".U) {
     alu.io.in2 := reg_file.io.WriteData
-    EX.io.rs2Sel_in := reg_file.io.WriteData.asUInt
+    EX.io.offSet_in := reg_file.io.WriteData
   }.otherwise {
     alu.io.in2 := ID.io.operandB_out
-    EX.io.rs2Sel_in := ID.io.operandB_out.asUInt
+    EX.io.offSet_in := ID.io.operandB_out
 
     }}
    alu.io.alu_Op:=alu_cnt.io.x
@@ -403,12 +445,7 @@ when(BF.io.forward_rs2 === "b000".U) {
 
     //MEM Storage
     
-    Mem_wb.io.regWrite_in:=EX.io.regWrite_out
     
-    Mem_wb.io.baseReg_in:=EX.io.baseReg_out
-    Mem_wb.io.offSet_in:=EX.io.offSet_out
-    Mem_wb.io.rs2Sel_in:=EX.io.rs2Sel_out
-
     
     
   
@@ -447,7 +484,14 @@ when(BF.io.forward_rs2 === "b000".U) {
     data_mem.io.Addr:=EX.io.aluOutput_out(11,2).asUInt
     data_mem.io.MemWrite:=EX.io.memWrite_out
     data_mem.io.MemRead:=EX.io.memRead_out
-    data_mem.io.Data:=EX.io.rs2Sel_out.asSInt
+    data_mem.io.Data:=EX.io.offSet_out
+
+    Mem_wb.io.regWrite_in:=EX.io.regWrite_out
+    
+    Mem_wb.io.baseReg_in:=EX.io.baseReg_out
+    Mem_wb.io.offSet_in:=EX.io.offSet_out
+    Mem_wb.io.rs2Sel_in:=EX.io.rs2Sel_out
+
 
     Mem_wb.io.MemRead_in:=EX.io.memRead_out
     Mem_wb.io.memToReg_in:=EX.io.memToReg_out
