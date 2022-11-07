@@ -18,6 +18,8 @@ class ID extends Module{
 		val operandA_in = Input(SInt(32.W))
 		val operandB_in = Input(SInt(32.W))
 		val rd_in = Input(UInt(5.W))
+		val func3=Input(UInt(3.W))
+		val func7=Input(UInt(7.W))
 		// val strData_in = Input(SInt(32.W))  
 		val rs1Ins_in = Input(UInt(5.W))
 		val rs2Ins_in = Input(UInt(5.W))
@@ -39,6 +41,8 @@ class ID extends Module{
 		val operandA_out = Output(SInt(32.W))
 		val operandB_out = Output(SInt(32.W))
 		val rd_out = Output(UInt(5.W))
+		val func3_o=Output(UInt(3.W))
+		val func7_o=Output(UInt(7.W))
 		// val strData_out = Output(SInt(32.W))
 		val rs1Ins_out = Output(UInt(5.W))
 		val rs2Ins_out = Output(UInt(5.W))
@@ -52,6 +56,8 @@ class ID extends Module{
 
 	val reg_memWrite = RegInit(0.U(1.W))
 	val reg_memRead = RegInit(0.U(1.W))
+	val reg_fun3=RegInit(0.U(3.W))
+	val reg_fun7=RegInit(0.U(7.W))
 	val reg_memToReg = RegInit(0.U(1.W))
 	val reg_operandAsel = RegInit(0.U(2.W))
 	val reg_operandBsel = RegInit(0.U(1.W))
@@ -72,6 +78,8 @@ class ID extends Module{
 
 
 	reg_memWrite := io.memWrite_in
+	reg_fun3:=io.func3
+	reg_fun7:=io.func7
 	reg_memRead := io.memRead_in
 	reg_memToReg := io.memToReg_in
 	reg_operandA := io.operandA_in
@@ -95,6 +103,8 @@ class ID extends Module{
 	io.memWrite_out := reg_memWrite
 	io.memRead_out := reg_memRead
 	io.memToReg_out := reg_memToReg
+	io.func3_o:=reg_fun3
+	io.func7_o:=reg_fun7
 	io.operandA_out := reg_operandA
 	io.operandB_out := reg_operandB
 	io.rd_out := reg_rd
