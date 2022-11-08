@@ -57,7 +57,6 @@ class Top extends Module{
 
      
     controler.io.opcod:=IF.io.ins_out(6,0)
-    reg_file.io.write:=Mem_wb.io.regWrite_out
     reg_file.io.rs1:=IF.io.ins_out(19,15)
     reg_file.io.rs2:=IF.io.ins_out(24,20)
 
@@ -103,12 +102,7 @@ class Top extends Module{
     ID.io.operandB_in := reg_file.io.rd2
     }
         
-    //HD
-    HD.io.IF_ID_INST := IF.io.ins_out
-    HD.io.ID_EX_MEMREAD := ID.io.memRead_out
-    HD.io.ID_EX_REGRD := ID.io.rd_out
-    HD.io.pc_in := IF.io.pc4_out.asSInt
-    HD.io.current_pc := IF.io.pc_out.asSInt
+  
     
 // *********** ----------- DECODE (ID) STAGE ----------- ********* //
     when(HD.io.ctrl_forward === "b1".U) {
@@ -253,16 +247,23 @@ when(BF.io.forward_rs2 === "b000".U) {
     ID.io.operandA_in := reg_file.io.rd1
 	ID.io.operandB_in:= reg_file.io.rd2
 
+      //HD
+    HD.io.IF_ID_INST := IF.io.ins_out
+    HD.io.ID_EX_MEMREAD := ID.io.memRead_out
+    HD.io.ID_EX_REGRD := ID.io.rd_out
+    HD.io.pc_in := IF.io.pc4_out
+    HD.io.current_pc := IF.io.pc_out
+
     when(HD.io.inst_forward === "b1".U) {
     IF.io.ins_in := HD.io.inst_out.asUInt
-    IF.io.pc_in := HD.io.current_pc_out.asUInt
+    IF.io.pc_in := HD.io.current_pc_out
     }.otherwise {
         IF.io.ins_in := inst_mem.io.inst
     }
-
+//baseReg_in
 
     when(HD.io.pc_forward === "b1".U) {
-    pc.io.addr := HD.io.pc_out.asUInt
+    pc.io.addr := HD.io.pc_out
     }.otherwise {
     when(controler.io.next_pc === "b01".U) {
       when(BL.io.output === 1.U && controler.io.branch === 1.B) {
@@ -296,11 +297,11 @@ when(BF.io.forward_rs2 === "b000".U) {
 
     EX.io.aluOutput_in:=alu.io.out 
     EX.io.rd_in:=ID.io.rd_out // using for 5 cycle delay
-    EX.io.rs2Sel_in:=ID.io.rs2Ins_out
+    //EX.io.rs2Sel_in:=ID.io.rs2Ins_out
     
     EX.io.memToReg_in:=ID.io.memToReg_out
 	EX.io.regWrite_in :=ID.io.regWrite_out
-	EX.io.baseReg_in := ID.io.operandA_out
+	//EX.io.baseReg_in := ID.io.operandA_out
 	EX.io.offSet_in := ID.io.operandB_out
 
 
@@ -428,15 +429,18 @@ when(BF.io.forward_rs2 === "b000".U) {
     data_mem.io.MemRead:=EX.io.memRead_out
     data_mem.io.Data:=EX.io.offSet_out
 
-    Mem_wb.io.regWrite_in:=EX.io.regWrite_out
+    //Mem_wb.io.rs2Sel_in:=EX.io.rs2Sel_out
+
     
-    Mem_wb.io.baseReg_in:=EX.io.baseReg_out
-    Mem_wb.io.offSet_in:=EX.io.offSet_out
-    Mem_wb.io.rs2Sel_in:=EX.io.rs2Sel_out
+    //Mem_wb.io.baseReg_in:=EX.io.baseReg_out
+    //Mem_wb.io.offSet_in:=EX.io.offSet_out
+    //Mem_wb.io.rs2Sel_in:=EX.io.rs2Sel_out
+    //EX.io.rs2Sel_in:=ID.io.rs2Ins_out
 
 
     Mem_wb.io.MemRead_in:=EX.io.memRead_out
     Mem_wb.io.memToReg_in:=EX.io.memToReg_out
+    Mem_wb.io.regWrite_in:=EX.io.regWrite_out
     Mem_wb.io.memWrite_in:=EX.io.memWrite_out
     Mem_wb.io.dataOut_in:=data_mem.io.out
     Mem_wb.io.aluOutput_in:=EX.io.aluOutput_out

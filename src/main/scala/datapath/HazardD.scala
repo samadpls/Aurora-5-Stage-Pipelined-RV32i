@@ -1,20 +1,18 @@
 package datapath
-import  chisel3._ 
-import  chisel3.util._
-
+import chisel3._
 class HazardDetection extends Module {
   val io = IO(new Bundle {
     val IF_ID_INST = Input(UInt(32.W))
     val ID_EX_MEMREAD = Input(UInt(1.W))
     val ID_EX_REGRD = Input(UInt(5.W))
-    val pc_in = Input(SInt(32.W))
-    val current_pc = Input(SInt(32.W))
+    val pc_in = Input(UInt(32.W))
+    val current_pc = Input(UInt(32.W))
     val inst_forward = Output(UInt(1.W))
     val pc_forward = Output(UInt(1.W))
     val ctrl_forward = Output(UInt(1.W))
     val inst_out = Output(UInt(32.W))
-    val pc_out = Output(SInt(32.W))
-    val current_pc_out = Output(SInt(32.W))
+    val pc_out = Output(UInt(32.W))
+    val current_pc_out = Output(UInt(32.W))
   })
   val rs1_sel = io.IF_ID_INST(19, 15)
   val rs2_sel = io.IF_ID_INST(24, 20)
