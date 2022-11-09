@@ -23,6 +23,10 @@
     "originalMemoryNameOpt":"imem"
   },
   {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|datamem>io_MemWrite"
+  },
+  {
     "class":"firrtl.transforms.BlackBoxTargetDirAnno",
     "targetDir":"test_run_dir\\top__Test"
   }

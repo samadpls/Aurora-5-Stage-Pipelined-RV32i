@@ -11,6 +11,7 @@ class datamem extends Module {
 	val out = Output(SInt(32.W))
   })
 	val mem = Mem(1024,SInt(32.W))
+	dontTouch(io.MemWrite)
 	when (io.MemWrite === 1.B){
 		mem.write(io.Addr , io.Data )
 		}

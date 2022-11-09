@@ -94,11 +94,11 @@ class controler extends Module {
           }
         is("b0100011".U){ //S-type b0100011
             io.memwrite:=1.B
-            io.regwrite:=1.B
+            io.regwrite:=0.B
             io.aluop:="b101".U
             io.op_b:=1.B
             io.extend_sel:="b01".U
-            io.memwrite:=0.B
+            //io.memwrite:=0.B
             io.branch:=0.B
             io.memread :=0.B
             io.memtoreg:=0.B

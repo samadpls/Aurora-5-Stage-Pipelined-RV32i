@@ -11,7 +11,7 @@ class top_io extends Bundle {
 class Top extends Module{
     val io = IO (new top_io())
 
-    io.out:=0.B
+    io.out:=0.U
 
     val pc=Module( new pccounter )
     val data_mem=Module(new datamem)
@@ -102,8 +102,6 @@ class Top extends Module{
     ID.io.operandB_in := reg_file.io.rd2
     }
         
-  
-    
 // *********** ----------- DECODE (ID) STAGE ----------- ********* //
     when(HD.io.ctrl_forward === "b1".U) {
         ID.io.memWrite_in := 0.U
@@ -129,6 +127,17 @@ class Top extends Module{
 
 }
 
+  	when(controler.io.extend_sel === "b00".U){
+		ID.io.imm  := imm.io.i_imm
+	}.elsewhen(controler.io.extend_sel === "b10".U){
+		ID.io.imm  := imm.io.u_imm
+	}.elsewhen(controler.io.extend_sel === "b01".U){
+		ID.io.imm  := imm.io.s_imm
+	}.otherwise{
+		ID.io.imm  := 0.S
+        }
+
+
 
       
      //BF
@@ -148,7 +157,7 @@ class Top extends Module{
     BL.io.in_rs2 := reg_file.io.rd2
     BL.io.in_func3 := IF.io.ins_out(14,12)
      // //jal r
-    Jalr.io.addr:=reg_file.io.rs1.asSInt //input a
+    Jalr.io.addr:=reg_file.io.rd1 //input a
     Jalr.io.pc_addr:= imm.io.i_imm //input b
 
 when(BF.io.forward_rs1 === "b0000".U) {
@@ -244,9 +253,7 @@ when(BF.io.forward_rs2 === "b000".U) {
     ID.io.rs1Ins_in:=IF.io.ins_out(19,15)
     ID.io.rs2Ins_in:=IF.io.ins_out(24,20)
     ID.io.rd_in:=IF.io.ins_out(11,7)
-    ID.io.operandA_in := reg_file.io.rd1
-	ID.io.operandB_in:= reg_file.io.rd2
-
+    
       //HD
     HD.io.IF_ID_INST := IF.io.ins_out
     HD.io.ID_EX_MEMREAD := ID.io.memRead_out
@@ -322,22 +329,17 @@ when(BF.io.forward_rs2 === "b000".U) {
 
     
     //Operand B alu.io.alu_Op:=ID.io.aluCtrl_out
-	when(controler.io.extend_sel === "b00".U){
-		ID.io.imm  := imm.io.i_imm
-	}.elsewhen(controler.io.extend_sel === "b10".U){
-		ID.io.imm  := imm.io.u_imm
-	}.elsewhen(controler.io.extend_sel === "b01".U){
-		ID.io.imm  := imm.io.s_imm
-	}.otherwise{
-		ID.io.imm  := 0.S
-        }
+
     
     
     when(ID.io.operandBsel_out===1.U){
         alu.io.in2:=ID.io.imm_out	
-    when (Forward_U.io.forward_b === "b01".U){EX.io.offSet_in := EX.io.aluOutput_out}
-    .elsewhen (Forward_U.io.forward_b === "b10".U ){EX.io.offSet_in := reg_file.io.WriteData}
-    .elsewhen (Forward_U.io.forward_b === "b00".U ){EX.io.offSet_in := ID.io.operandB_out}
+    when (Forward_U.io.forward_b === "b01".U){
+        EX.io.offSet_in := EX.io.aluOutput_out}
+    .elsewhen (Forward_U.io.forward_b === "b10".U ){
+        EX.io.offSet_in := reg_file.io.WriteData}
+    .elsewhen (Forward_U.io.forward_b === "b00".U ){
+        EX.io.offSet_in := ID.io.operandB_out}
     .otherwise {
     EX.io.offSet_in := ID.io.operandB_out
     }}.otherwise{
@@ -360,7 +362,7 @@ when(BF.io.forward_rs2 === "b000".U) {
 
     //IF
     
-    io.addr:=inst_mem.io.inst
+    io.addr:=inst_mem.io.addr
 
     
 
@@ -381,15 +383,11 @@ when(BF.io.forward_rs2 === "b000".U) {
 	
     //EX
   
-    
+
     
 
     //MEM Storage
     
-    
-    
-    
-  
   
     // //branch     
     // branch.io.arg_x:= 0.S 
@@ -424,10 +422,11 @@ when(BF.io.forward_rs2 === "b000".U) {
     EX.io.memWrite_in:=ID.io.memWrite_out
     EX.io.memRead_in:=ID.io.memRead_out
 
+    data_mem.io.Data:=EX.io.offSet_out
     data_mem.io.Addr:=EX.io.aluOutput_out.asUInt
     data_mem.io.MemWrite:=EX.io.memWrite_out
     data_mem.io.MemRead:=EX.io.memRead_out
-    data_mem.io.Data:=EX.io.offSet_out
+   
 
     //Mem_wb.io.rs2Sel_in:=EX.io.rs2Sel_out
 
@@ -446,11 +445,12 @@ when(BF.io.forward_rs2 === "b000".U) {
     Mem_wb.io.aluOutput_in:=EX.io.aluOutput_out
     Mem_wb.io.rd_in:=EX.io.rd_out
 
+    reg_file.io.write:=Mem_wb.io.regWrite_out
     reg_file.io.WriteData:=MuxCase(0.S,Array(
         (Mem_wb.io.memToReg_out === 0.U) -> Mem_wb.io.aluOutput_out,
         (Mem_wb.io.memToReg_out === 1.U) -> Mem_wb.io.dataOut_out
     ))
-    reg_file.io.write:=Mem_wb.io.regWrite_out
+    
     reg_file.io.rd:=Mem_wb.io.rd_out
     
 
