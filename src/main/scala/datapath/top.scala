@@ -69,11 +69,7 @@ class Top extends Module{
     
 
       //alu cntrl
-   
 
-
-
-   
 
     alu_cnt.io.alu_op:=ID.io.aluOp_out
     alu_cnt.io.func3:=ID.io.func3_o
@@ -126,19 +122,12 @@ class Top extends Module{
     ID.io.NextPc :=  controler.io.next_pc
 
 }
-
-  	when(controler.io.extend_sel === "b00".U){
-		ID.io.imm  := imm.io.i_imm
-	}.elsewhen(controler.io.extend_sel === "b10".U){
-		ID.io.imm  := imm.io.u_imm
-	}.elsewhen(controler.io.extend_sel === "b01".U){
-		ID.io.imm  := imm.io.s_imm
-	}.otherwise{
-		ID.io.imm  := 0.S
-        }
-
-
-
+    ID.io.imm:= MuxLookup (controler.io.extend_sel, 0.S, Array (
+                ("b00".U) -> imm.io.i_imm ,
+                ("b01".U) -> imm.io.s_imm,
+                ("b10".U) -> imm.io.u_imm)
+             )
+  	
       
      //BF
     // Initializing Branch Forward Unit
@@ -160,77 +149,62 @@ class Top extends Module{
     Jalr.io.addr:=reg_file.io.rd1 //input a
     Jalr.io.pc_addr:= imm.io.i_imm //input b
 
-when(BF.io.forward_rs1 === "b0000".U) {
-  // No hazard just use register file data
-  BL.io.in_rs1 := reg_file.io.rd1
-  Jalr.io.addr := reg_file.io.rd1
-} .elsewhen(BF.io.forward_rs1 === "b0001".U) {
-  // hazard in alu stage forward data from alu output
-  BL.io.in_rs1 := alu.io.out
-  Jalr.io.addr:= reg_file.io.rd1
-} .elsewhen(BF.io.forward_rs1 === "b0010".U) {
-  // hazard in EX/MEM stage forward data from EX/MEM.alu_output
-  BL.io.in_rs1 := EX.io.aluOutput_out
-  Jalr.io.addr := reg_file.io.rd1
-} .elsewhen(BF.io.forward_rs1 === "b0011".U) {
-  // hazard in MEM/WB stage forward data from register file write data which will have correct data from the MEM/WB mux
-  BL.io.in_rs1 := reg_file.io.WriteData
-  Jalr.io.addr := reg_file.io.rd1
-} .elsewhen(BF.io.forward_rs1 === "b0100".U) {
+    switch(BF.io.forward_rs1){
+        is("b0000".U){
+            // No hazard just use register file data
+            BL.io.in_rs1 := reg_file.io.rd1
+            Jalr.io.addr := reg_file.io.rd1}
+        is("b0001".U){
+             // hazard in alu stage forward data from alu output
+            BL.io.in_rs1 := alu.io.out
+            Jalr.io.addr:= reg_file.io.rd1}
+        is("b0010".U){ 
+            // hazard in EX/MEM stage forward data from EX/MEM.alu_output
+            BL.io.in_rs1 := EX.io.aluOutput_out
+            Jalr.io.addr := reg_file.io.rd1}
+        is("b0011".U){
+            // hazard in MEM/WB stage forward data from register file write data which will have correct data from the MEM/WB mux
+            BL.io.in_rs1 := reg_file.io.WriteData
+            Jalr.io.addr := reg_file.io.rd1}
+        is("b0100".U) {
   // hazard in EX/MEM stage and load type instruction so forwarding from data memory data output instead of EX/MEM.alu_output
-  BL.io.in_rs1 := data_mem.io.out
-  Jalr.io.addr := reg_file.io.rd1
-} .elsewhen(BF.io.forward_rs1 === "b0101".U) {
+            BL.io.in_rs1 := data_mem.io.out
+            Jalr.io.addr := reg_file.io.rd1}
+        is("b0101".U) {
   // hazard in MEM/WB stage and load type instruction so forwarding from register file write data which will have the correct output from the mux
-  BL.io.in_rs1:= reg_file.io.WriteData
-  Jalr.io.addr := reg_file.io.rd1
-}.elsewhen(BF.io.forward_rs1 === "b0110".U) {
+            BL.io.in_rs1:= reg_file.io.WriteData
+            Jalr.io.addr := reg_file.io.rd1}
+        is("b0110".U) {
     // hazard in alu stage forward data from alu output
-    Jalr.io.addr := alu.io.out
-    BL.io.in_rs1 := reg_file.io.rd1
-} .elsewhen(BF.io.forward_rs1 === "b0111".U) {
+            Jalr.io.addr := alu.io.out
+            BL.io.in_rs1 := reg_file.io.rd1}
+        is("b0111".U) {
     // hazard in EX/MEM stage forward data from EX/MEM.alu_output
-    Jalr.io.addr := EX.io.aluOutput_out
-    BL.io.in_rs1 := reg_file.io.rd1
-} .elsewhen(BF.io.forward_rs1 === "b1000".U) {
-    // hazard in MEM/WB stage forward data from register file write data which will have correct data from the MEM/WB mux
-    Jalr.io.addr := reg_file.io.WriteData
-    BL.io.in_rs1:= reg_file.io.rd1
-} .elsewhen(BF.io.forward_rs1 === "b1001".U) {
+            Jalr.io.addr := EX.io.aluOutput_out
+            BL.io.in_rs1 := reg_file.io.rd1}
+        is("b1000".U) { 
+   // hazard in MEM/WB stage forward data from register file write data which will have correct data from the MEM/WB mux
+            Jalr.io.addr := reg_file.io.WriteData
+            BL.io.in_rs1:= reg_file.io.rd1}
+        is("b1001".U) {
     // hazard in EX/MEM stage and load type instruction so forwarding from data memory data output instead of EX/MEM.alu_output
-    Jalr.io.addr := data_mem.io.out
-    BL.io.in_rs1 := reg_file.io.rd1
-} .elsewhen(BF.io.forward_rs1 === "b1010".U) {
+            Jalr.io.addr := data_mem.io.out
+            BL.io.in_rs1 := reg_file.io.rd1}   
+        is("b1010".U) {
     // hazard in MEM/WB stage and load type instruction so forwarding from register file write data which will have the correct output from the mux
-    Jalr.io.addr := reg_file.io.WriteData
-    BL.io.in_rs1 := reg_file.io.rd1
-    }.otherwise {
-    BL.io.in_rs1 := reg_file.io.rd1
-    Jalr.io.addr := reg_file.io.rd1
-}
+            Jalr.io.addr := reg_file.io.WriteData
+            BL.io.in_rs1 := reg_file.io.rd1}
+           
+    }
 // FOR REGISTER RS2 in BRANCH LOGIC UNIT
-when(BF.io.forward_rs2 === "b000".U) {
-  // No hazard just use register file data
-  BL.io.in_rs2  := reg_file.io.rd2
-} .elsewhen(BF.io.forward_rs2 === "b001".U) {
-  // hazard in alu stage forward data from alu output
-  BL.io.in_rs2  := alu.io.out
-} .elsewhen(BF.io.forward_rs2 === "b010".U) {
-  // hazard in EX/MEM stage forward data from EX/MEM.alu_output
-  BL.io.in_rs2  := EX.io.aluOutput_out
-} .elsewhen(BF.io.forward_rs2 === "b011".U) {
-  // hazard in MEM/WB stage forward data from register file write data which will have correct data from the MEM/WB mux
-  BL.io.in_rs2  := reg_file.io.WriteData
-} .elsewhen(BF.io.forward_rs2 === "b100".U) {
-  // hazard in EX/MEM stage and load type instruction so forwarding from data memory data output instead of EX/MEM.alu_output
-  BL.io.in_rs2 := data_mem.io.out
-} .elsewhen(BF.io.forward_rs2 === "b101".U) {
-  // hazard in MEM/WB stage and load type instruction so forwarding from register file write data which will have the correct output from the mux
-  BL.io.in_rs2  := reg_file.io.WriteData
+switch(BF.io.forward_rs2){
+    is("b000".U){BL.io.in_rs2  := reg_file.io.rd2}// No hazard just use register file data
+    is("b001".U){ BL.io.in_rs2  := alu.io.out}// hazard in alu stage forward data from alu output
+    is("b010".U){BL.io.in_rs2  := EX.io.aluOutput_out}// hazard in EX/MEM stage forward data from EX/MEM.alu_output
+    is("b011".U){BL.io.in_rs2  := reg_file.io.WriteData}// hazard in MEM/WB stage forward data from register file write data which will have correct data from the MEM/WB mux
+    is("b100".U){BL.io.in_rs2 := data_mem.io.out} // hazard in EX/MEM stage and load type instruction so forwarding from data memory data output instead of EX/MEM.alu_output
+    is("b101".U){ BL.io.in_rs2  := reg_file.io.WriteData}// hazard in MEM/WB stage and load type instruction so forwarding from register file write data which will have the correct output from the mux
 }
-  .otherwise {
-    BL.io.in_rs2  := reg_file.io.rd2
-  }
  
     //ID
 
