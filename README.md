@@ -1,4 +1,7 @@
-<h1 align='center'> Aurora-5-Stage-Pipelined-RV32i</h1>
+<a href="https://linkedin.com/in/samadpls" target="_blank">
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&text=Aurora-5-Stage-Pipelined-RV32i&fontSize=30&height=120&width=100%&section=header"/>
+</p></a>
 
 <div align='center'><img src="https://readme-typing-svg.demolab.com?font=Arial&size=22&pause=1000&color=F7F7F7&multiline=true&width=435&lines=A+RISC-V+based+5-Stage+Pipelined+CPU🕊" alt="Typing SVG" /><br>
 <img src="https://readme-typing-svg.demolab.com?font=Arial&size=18&pause=1000&color=F7F7F7&multiline=true&width=435&lines=Designed+by+Abdul+Samad+Siddiqui🤍" alt="Typing SVG" />
