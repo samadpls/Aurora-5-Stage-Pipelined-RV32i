@@ -1,0 +1,301 @@
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:3:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:4:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3.util._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:5:35: illegal inheritance from final class Module[0m
+[0m[[0m[31merror[0m] [0m[0mclass DecodeBranchForward extends Module {[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:6:12: not found: value IO[0m
+[0m[[0m[31merror[0m] [0m[0m  val io = IO(new Bundle {[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:6:19: not found: type Bundle[0m
+[0m[[0m[31merror[0m] [0m[0m  val io = IO(new Bundle {[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:7:23: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val ID_EX_REGRD = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:7:29: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val ID_EX_REGRD = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:7:36: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val ID_EX_REGRD = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:8:23: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val ID_EX_MEMRD = Input(Bool())[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:8:29: not found: value Bool[0m
+[0m[[0m[31merror[0m] [0m[0m    val ID_EX_MEMRD = Input(Bool())[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:9:24: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val EX_MEM_REGRD = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:9:30: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val EX_MEM_REGRD = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:9:37: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val EX_MEM_REGRD = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:10:24: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val EX_MEM_MEMRD = Input(Bool())[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:10:30: not found: value Bool[0m
+[0m[[0m[31merror[0m] [0m[0m    val EX_MEM_MEMRD = Input(Bool())[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:11:24: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val MEM_WB_REGRD = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:11:30: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val MEM_WB_REGRD = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:11:37: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val MEM_WB_REGRD = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:12:24: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val MEM_WB_MEMRD = Input(Bool())[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:12:30: not found: value Bool[0m
+[0m[[0m[31merror[0m] [0m[0m    val MEM_WB_MEMRD = Input(Bool())[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:13:19: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val rs1_sel = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:13:25: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val rs1_sel = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:13:32: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val rs1_sel = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:14:19: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val rs2_sel = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:14:25: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val rs2_sel = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:14:32: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val rs2_sel = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:15:23: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val ctrl_branch = Input(Bool())[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:15:29: not found: value Bool[0m
+[0m[[0m[31merror[0m] [0m[0m    val ctrl_branch = Input(Bool())[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:16:23: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m    val forward_rs1 = Output(UInt(4.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:16:30: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val forward_rs1 = Output(UInt(4.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:16:37: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val forward_rs1 = Output(UInt(4.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:17:23: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m    val forward_rs2 = Output(UInt(4.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:17:30: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val forward_rs2 = Output(UInt(4.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:17:37: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val forward_rs2 = Output(UInt(4.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:21:1: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0mwhen(io.ctrl_branch === 1.U) {[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:23:3: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m  when(io.ID_EX_REGRD =/= "b00000".U && io.ID_EX_MEMRD =/= 1.U && (io.ID_EX_REGRD === io.rs1_sel) && (io.ID_EX_REGRD === io.rs2_sel)) {[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:33:3: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m  when(io.EX_MEM_REGRD =/= "b00000".U && io.EX_MEM_MEMRD =/= 1.U &&[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:74:3: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m  when(io.MEM_WB_REGRD =/= "b00000".U && io.MEM_WB_MEMRD =/= 1.U &&[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:139:9: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m        when(io.ID_EX_REGRD =/= "b00000".U && io.ID_EX_MEMRD =/= 1.U && (io.ID_EX_REGRD === 	io.rs1_sel)){[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:144:9: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m        when(io.EX_MEM_REGRD =/= "b00000".U && io.EX_MEM_MEMRD =/= 1.U &&[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchF.scala:161:9: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m        when(io.MEM_WB_REGRD =/= "b00000".U && io.MEM_WB_MEMRD =/= 1.U &&[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:2:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:3:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3.util._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:5:27: illegal inheritance from final class Module[0m
+[0m[[0m[31merror[0m] [0m[0mclass BranchLogic extends Module {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:6:12: not found: value IO[0m
+[0m[[0m[31merror[0m] [0m[0m  val io = IO(new Bundle {[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:6:19: not found: type Bundle[0m
+[0m[[0m[31merror[0m] [0m[0m  val io = IO(new Bundle {[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:7:18: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val in_rs1 = Input(SInt(32.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:7:24: not found: value SInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val in_rs1 = Input(SInt(32.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:7:32: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val in_rs1 = Input(SInt(32.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:8:18: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val in_rs2 = Input(SInt(32.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:8:24: not found: value SInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val in_rs2 = Input(SInt(32.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:8:32: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val in_rs2 = Input(SInt(32.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:9:20: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val in_func3 = Input(UInt(3.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:9:26: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val in_func3 = Input(UInt(3.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:9:33: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val in_func3 = Input(UInt(3.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:10:18: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m    val output = Output(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:10:25: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val output = Output(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:10:32: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val output = Output(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:13:3: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m  when(io.in_func3 === "b000".U) {[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:15:5: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m    when(io.in_rs1 === io.in_rs2) {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:22:5: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m    when(io.in_rs1 =/= io.in_rs2) {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:29:5: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m    when(io.in_rs1 < io.in_rs2) {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:36:5: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m    when(io.in_rs1 >= io.in_rs2) {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:43:5: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m    when(io.in_rs1.asUInt < io.in_rs2.asUInt) {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\BranchL.scala:50:5: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m    when(io.in_rs1.asUInt >= io.in_rs2.asUInt) {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:2:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3._ [0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:3:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3.util._ [0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:5:18: illegal inheritance from final class Module[0m
+[0m[[0m[31merror[0m] [0m[0mclass EX extends Module{[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:6:12: not found: value IO[0m
+[0m[[0m[31merror[0m] [0m[0m    val io=IO(new Bundle{[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:6:19: not found: type Bundle[0m
+[0m[[0m[31merror[0m] [0m[0m    val io=IO(new Bundle{[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:7:27: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m        val memWrite_in = Input(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:7:33: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m        val memWrite_in = Input(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:7:40: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m        val memWrite_in = Input(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:8:20: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m		val memRead_in = Input(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:8:26: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m		val memRead_in = Input(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:8:33: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m		val memRead_in = Input(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:9:21: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m		val memToReg_in = Input(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:9:27: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m		val memToReg_in = Input(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:9:34: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m		val memToReg_in = Input(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:10:15: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m		val rd_in = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		            ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:10:21: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m		val rd_in = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:10:28: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m		val rd_in = Input(UInt(5.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:11:22: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m		val aluOutput_in = Input(SInt(32.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:11:28: not found: value SInt[0m
+[0m[[0m[31merror[0m] [0m[0m		val aluOutput_in = Input(SInt(32.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:11:36: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m		val aluOutput_in = Input(SInt(32.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:13:21: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m		val regWrite_in = Input(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:13:27: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m		val regWrite_in = Input(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:13:34: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m		val regWrite_in = Input(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:16:19: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m		val offSet_in = Input(SInt(32.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:16:25: not found: value SInt[0m
+[0m[[0m[31merror[0m] [0m[0m		val offSet_in = Input(SInt(32.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:16:33: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m		val offSet_in = Input(SInt(32.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:18:22: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m		val memWrite_out = Output(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:18:29: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m		val memWrite_out = Output(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:18:36: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m		val memWrite_out = Output(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:19:21: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m		val memRead_out = Output(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:19:28: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m		val memRead_out = Output(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:19:35: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m		val memRead_out = Output(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:20:22: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m		val memToReg_out = Output(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:20:29: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m		val memToReg_out = Output(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\5_stage_pipline\Aurora-5-Stage-Pipelined-RV32i\src\main\scala\datapath\EX.scala:20:36: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m		val memToReg_out = Output(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m		                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m100 errors found[0m

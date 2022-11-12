@@ -36,7 +36,7 @@ Change the .txt file path to match your file that you created above storing your
 After setting up the InsMem.scala file, go inside the Ababeel folder.
 
 ```ruby
-cd Aurora-5-Stage-Pipelined-RV32i
+cd Aurora
 ```
 And enter
 
