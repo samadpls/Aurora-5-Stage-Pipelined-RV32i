@@ -17,7 +17,7 @@ git clone https://github.com/samadpls/Aurora-5-Stage-Pipelined-RV32i.git
 Create a .txt file and place the ***hexadecimal*** code of your instructions simulated on ***Venus*** (RISC-V Simulator)\
 Each instruction's hexadecimal code must be on seperate line as following.
 
-For example instructions, Go to text.txt and copy code in the .txt file\
+For example instructions, Go to text.txt and copy code in the .txt file  
 
  You'll find test.asm file for the Assembly instructions for the purpose of checking.
 
@@ -36,7 +36,7 @@ loadMemoryFromFile(mem, "D:/5_stage_pipline/src/main/scala/datapath/text.txt")
 ```
 
 Change the .txt file path to match your file that you created above storing your own program instructions.\
-After setting up the InsMem.scala file, go inside the Ababeel folder.
+After setting up the InsMem.scala file, go inside the Aurora folder.
 
 ```ruby
 cd Aurora
