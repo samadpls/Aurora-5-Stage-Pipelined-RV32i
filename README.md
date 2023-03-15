@@ -7,7 +7,21 @@
 <img src="https://readme-typing-svg.demolab.com?font=Arial&size=18&pause=1000&color=F7F7F7&multiline=true&width=435&lines=Designed+by+Abdul+Samad+Siddiqui🤍" alt="Typing SVG" />
 </div>
 
-<img src='doc/5stage.png'>
+```text
+         ┌─┐          ┌─┐          ┌─┐           ┌─┐
+ ┌────┐  │ │  ┌────┐  │ │  ┌────┐  │ │  ┌─────┐  │ │  ┌────┐
+ │    │  │ │  │    │  │ │  │    │  │ │  │     │  │ │  │    │
+ │ IF ├─►│ ├─►│ ID ├─►│ ├─►│ EX ├─►│ ├─►│ MEM ├─►│ ├─►│ WB │
+ │    │  │ │  │    │  │ │  │    │  │ │  │     │  │ │  │    │
+ └────┘  │ │  └────┘  │ │  └────┘  │ │  └─────┘  │ │  └────┘
+         └─┘          └─┘          └─┘           └─┘
+        IF/ID        IF/ID        IF/MEM       MEM/ID
+      registers    registers    registers     registers
+      
+      
+ ```     
+     
+
 
 First of all get started by Cloning this repository in your machine.
 ```ruby
